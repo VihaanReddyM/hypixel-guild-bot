@@ -9,10 +9,6 @@ const bot = mineflayer.createBot({
 });
 
 const commands: Record<string, (bot: Bot, argument?: string) => Promise<void>> = {
-  stats: async (bot: Bot, argument?: string) => {
-    const { handleStatsCommand } = await import("./commands/stats");
-    await handleStatsCommand(bot, argument!);
-  },
   bw: async (bot: Bot, argument?: string) => {
     const { handleBwCommand } = await import("./commands/bw");
     await handleBwCommand(bot, argument!);
