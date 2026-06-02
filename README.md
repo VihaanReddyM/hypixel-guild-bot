@@ -13,7 +13,7 @@ A small Mineflayer bot that connects to Hypixel, listens to guild chat, and resp
 1. Install dependencies:
 
 ```bash
-bun install
+npm install
 ```
 
 2. Create a `.env` file in the project root:
@@ -31,13 +31,7 @@ HYPIXEL_API_KEY=your_hypixel_api_key
 ## Run
 
 ```bash
-bun run dev
-```
-
-Or:
-
-```bash
-bun run start
+npm run dev
 ```
 
 ## Usage

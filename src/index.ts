@@ -35,7 +35,7 @@ bot.on("messagestr", async (message) => {
   
   if (!message.startsWith("Guild > ")) return;
 
-  const guildMatch = message.match(/^Guild > .*?:\s+!(\w+)(?:\s+(\w+))?$/);
+  const guildMatch = message.match(/^Guild > .*?:\s+!(\w+)(?:\s+(\S+))?$/);
   if (!guildMatch) return;
 
   const command = guildMatch[1]!.toLowerCase();
