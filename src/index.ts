@@ -17,6 +17,18 @@ const commands: Record<string, (bot: Bot, argument?: string) => Promise<void>> =
     const { handleBwKillsCommand } = await import("./commands/bwkills");
     await handleBwKillsCommand(bot, argument!);
   },
+  stats: async (bot: Bot, argument?: string) => {
+    const { handleStatsCommand } = await import("./commands/stats");
+    await handleStatsCommand(bot, argument!);
+  },
+  wlr: async (bot: Bot, argument?: string) => {
+    const { handleWlrCommand } = await import("./commands/wlr");
+    await handleWlrCommand(bot, argument!);
+  },
+  fkdr: async (bot: Bot, argument?: string) => {
+    const { handleFkdrCommand } = await import("./commands/fkdr");
+    await handleFkdrCommand(bot, argument!);
+  }
 };
 
 bot.once("login", () => {

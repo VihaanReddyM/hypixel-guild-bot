@@ -1,7 +1,7 @@
 import type { Bot } from "mineflayer";
 
-import { getUUID } from "../services/mojang";
 import { getPlayer } from "../services/hypixel";
+import { getUUID } from "../services/mojang";
 
 export async function handleStatsCommand(bot: Bot, username: string) {
   const uuid = await getUUID(username);
@@ -10,10 +10,10 @@ export async function handleStatsCommand(bot: Bot, username: string) {
 
   const stars = player?.achievements?.bedwars_level ?? 0;
 
-  const bw = player?.stats?.Bedwars ?? {};
+  const bw = player?.stats?.Bedwars;
 
-  const wins = bw.wins_bedwars ?? 0;
-  const losses = bw.losses_bedwars ?? 1;
+  const wins =  bw?.wins_bedwars ?? 0;
+  const losses = bw?.losses_bedwars ?? 0;
 
   const wlr = (wins / losses).toFixed(2);
 

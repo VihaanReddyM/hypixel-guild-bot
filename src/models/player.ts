@@ -46,6 +46,11 @@ export interface SocialMedia {
   prompt: boolean;
 }
 
+export interface Achievements {
+  bedwars_level: number;
+  [key: string]: number;
+}
+
 export interface Player {
   uuid: string;
   displayname: string;
@@ -56,6 +61,7 @@ export interface Player {
     Bedwars?: BedwarsStats;
     [key: string]: unknown;
   };
+  achievements: Achievements;
   networkExp: number;
   socialMedia?: SocialMedia;
   mostRecentGameType?: string;
