@@ -28,8 +28,8 @@ export interface BedwarsStats {
   beds_broken_bedwars: number;
   beds_lost_bedwars: number;
   Experience: number;
-  active_star: string;
-  active_prestige_scheme: string;
+  active_star?: string;
+  active_prestige_scheme?: string;
 }
 
 export interface SocialMedia {
