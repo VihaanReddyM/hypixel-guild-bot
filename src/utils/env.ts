@@ -13,5 +13,6 @@ function requireEnv(name: string): string {
 export const env = {
   EMAIL: requireEnv("EMAIL"),
   VERSION: requireEnv("VERSION"),
-  HYPIXEL_API_KEY: requireEnv("HYPIXEL_API_KEY")
+  API_KEY: requireEnv("API_KEY"),
+  WORKER_URL: requireEnv("WORKER_URL")
 } as const;

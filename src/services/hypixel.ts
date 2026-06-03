@@ -1,21 +1,23 @@
 import axios from "axios";
 import type { HypixelApi, Player } from "../models/player";
+import { env } from "../utils/env";
 
-const API_KEY = process.env.HYPIXEL_API_KEY!;
-
-export async function getPlayer(uuid: string): Promise<Player> {
+export async function getPlayer(
+  identifier: string,
+): Promise<Player> {
   const { data } = await axios.get<HypixelApi>(
-    "https://api.hypixel.net/v2/player",
+    `${env.WORKER_URL}/player/${identifier}`,
     {
-      params: {
-        key: API_KEY,
-        uuid,
+      headers: {
+        Authorization: `Bearer ${env.API_KEY}`,
       },
-    }
+    },
   );
 
   if (!data.success) {
-    throw new Error(data.cause ?? "Hypixel API request failed");
+    throw new Error(
+      data.cause ?? "Worker request failed",
+    );
   }
 
   if (!data.player) {
