@@ -5,7 +5,7 @@ It uses a Cloudflare Worker proxy so your Hypixel API key never ships with the b
 
 ## Worker repo
 
-- **Hypixel API Worker repo:** `TODO: add GitHub URL here`
+- **[Hypixel API Worker repo](https://github.com/VihaanReddyM/Hypixel-API-worker)**
 
 ## Requirements
 
