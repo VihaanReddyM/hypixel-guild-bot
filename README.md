@@ -9,8 +9,7 @@ It uses a Cloudflare Worker proxy so your Hypixel API key never ships with the b
 
 ## Requirements
 
-- [Bun](https://bun.com) (for install/run scripts)
-- Node.js + npm (for the Worker repo and Wrangler)
+- Node.js + npm
 - A Microsoft account that owns Minecraft (used for auth)
 - A Cloudflare account (for Workers)
 - A Hypixel API key (stored as a Worker secret)
@@ -96,7 +95,7 @@ After deploy, copy your Worker URL (for example, `https://your-worker.workers.de
 1. Install dependencies:
 
 ```bash
-bun install
+npm install
 ```
 
 2. Create a `.env` file in the bot project root:
@@ -116,25 +115,25 @@ API_KEY=YOUR_RAW_GUILD_API_KEY
 ## Run
 
 ```bash
-bun run dev
+npm run dev
 ```
 
 Or:
 
 ```bash
-bun run start
+npm run start
 ```
 
 ## Usage
 
 In guild chat, use commands prefixed with `!`:
 
-- `!stats <username>` — replies with BedWars stars, wins, and WLR.
-- `!bw <username>` — placeholder (not implemented yet).
-- `!bwkills <username>` — placeholder (not implemented yet).
+- `!stats <username>` — BedWars stars, wins, and WLR.
+- `!bw <username>` — BedWars stars, wins, and WLR.
+- `!bwkills <username>` — kills, KDR, finals, and FKDR.
+- `!wlr <username>` — WLR only.
+- `!fkdr <username>` — FKDR only.
 
 The bot only responds to `Guild >` chat messages.
 
-## Notes
 
-This project was created with `bun init` (Bun v1.3.13).
